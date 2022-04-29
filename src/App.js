@@ -46,7 +46,7 @@ function App() {
     if (allEqual(shades)) {
       maxEl = shades[0];
       secondEl = shades[0];
-      options = addRandomNameOptions(names, maxEl, secondEl)
+      options = addRandomNameOptions(names, maxEl)
     } else {
       let maxElements = []
       while (shades.length > 0) {
@@ -78,7 +78,7 @@ function App() {
       } else {
         maxEl = maxElements[0]
         secondEl = maxElements[1]
-        options = addRandomNameOptions(names, maxEl, secondEl)
+        options = addRandomNameOptions(names, maxEl)
       }
       console.log("Max Elements::" + maxElements)
     }
@@ -113,15 +113,12 @@ function App() {
     setNum(event.target.value);
   }
 
-  const addRandomNameOptions = (names, maxEl, secondEl) => {
+  const addRandomNameOptions = (names, maxEl) => {
     let options = []
     var randomName = names[Math.floor(Math.random() * names.length)];
     //If all the shades are different, don't want to use color name
-    options.push('#' + secondEl.toLowerCase() + 'Thing.capitalize.s# and ' + randomName);
     options.push('#' + maxEl.toLowerCase() + 'Thing.capitalize.s# and ' + randomName);
-    options.push(randomName + ' and #' + secondEl.toLowerCase() + 'Thing.capitalize.s#');
     options.push(randomName + ' and #' + maxEl.toLowerCase() + 'Thing.capitalize.s#');
-    options.push(randomName + ' #' + secondEl.toLowerCase() + 'Noun.capitalize#');
     options.push(randomName + ' #' + maxEl.toLowerCase() + 'Noun.capitalize#');
     return options;
   }
