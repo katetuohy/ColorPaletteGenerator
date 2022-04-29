@@ -2,16 +2,6 @@ import './Palette.css';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 
-// function showTitle(event) {
-//   event.target.style.background = 'green';
-// }
-
-// function hideTitle(event) {
-//   event.target.style.background = 'white';
-// }
-
-// '#'+Math.floor(Math.random()*16777215).toString(16);
-
 function Palette(props) { 
 
   let colorBoxes=[];

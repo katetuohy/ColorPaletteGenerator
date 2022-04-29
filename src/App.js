@@ -1,13 +1,9 @@
-// import logo from './logo.svg';
 import './App.css';
 import * as React from 'react';
 import Palette from './Palette.js';
 import { Button, TextField } from '@mui/material';
 import tracery from 'tracery-grammar';
-import { GetColorName } from 'hex-color-to-color-name';
 import colorsJson from './tracery/colors.json';
-import { shades } from './ntc.js';
-// import ntc from './ntc.js';
 
 function App() {
 
